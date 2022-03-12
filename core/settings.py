@@ -159,3 +159,6 @@ CACHES = {
 }
 
 CACHE_TTL = 60 * 1
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"

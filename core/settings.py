@@ -147,3 +147,15 @@ REST_FRAMEWORK = {
         "rest_framework.parsers.MultiPartParser",
     ],
 }
+
+CACHES = {
+    "default": {
+        "BACKEND": config("CACHES_BACKEND"),
+        "LOCATION": config("CACHES_LOCATION"),
+        "OPTIONS": {
+            "CLIENT_CLASS": config("CACHES_CLIENT_CLASS"),
+        },
+    }
+}
+
+CACHE_TTL = 60 * 1

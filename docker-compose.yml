@@ -1,6 +1,12 @@
 version: "3.9"
 
 services:
+  redis:
+    image: redis
+    command: redis-server
+    hostname: redis
+    ports:
+      - "6379:6379"
   db_develop:
     container_name: mariadb
     image: mariadb:10.2
